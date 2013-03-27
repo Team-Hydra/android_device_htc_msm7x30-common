@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+# Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -29,6 +30,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
+# USB init script
 PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/init.htc7x30.usb.rc:root/init.htc7x30.usb.rc
 
@@ -46,10 +48,18 @@ PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
     device/htc/msm7x30-common/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
 
+# Media Profiles
 PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/msm7x30-common/media_codecs.xml:system/etc/media_codecs.xml \
-    device/htc/msm7x30-common/audio_policy.conf:system/etc/audio_policy.conf
+    device/htc/msm7x30-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/htc/msm7x30-common/configs/media_codecs.xml:system/etc/media_codecs.xml
+
+# Prebuilt Audio policy
+PRODUCT_COPY_FILES += \
+    device/htc/msm7x30-common/configs/audio_policy.conf:system/etc/audio_policy.conf
+
+# Common GPS config
+PRODUCT_COPY_FILES += \
+    device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
 
 # Audio
 PRODUCT_PACKAGES += \
