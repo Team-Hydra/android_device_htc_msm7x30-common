@@ -65,7 +65,7 @@ TARGET_GRALLOC_USES_ASHMEM := true
 TARGET_USES_GENLOCK := true
 TARGET_NO_HW_VSYNC := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
-BOARD_EGL_CFG := device/htc/msm7x30-common/egl.cfg
+BOARD_EGL_CFG := device/htc/msm7x30-common/configs/egl.cfg
 
 # Camera
 CAMERA_USES_SURFACEFLINGER_CLIENT_STUB := true

@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
 
 # Common GPS config
 PRODUCT_COPY_FILES += \
-    device/common/gps/gps.conf_US_SUPL:system/etc/gps.conf
+    device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
 
 # Audio
 PRODUCT_PACKAGES += \
