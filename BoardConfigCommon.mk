@@ -36,6 +36,8 @@ ARCH_ARM_HAVE_VFP := true
 USE_MALLOC_ALIGNMENT := 16
 TARGET_HAVE_TSLIB := false
 
+# Kernel
+TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
 
 # Scorpion optimizations
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
