@@ -90,9 +90,11 @@ BOARD_BLUEDROID_VENDOR_CONF := device/htc/msm7x30-common/bluetooth/vnd_msm7x30.t
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/htc/msm7x30-common/bluetooth/include
 
 # GPS
+TARGET_PROVIDES_GPS_LOC_API := true
 TARGET_QCOM_GPS_VARIANT := legacy
 BOARD_USES_QCOM_GPS := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 1200
+
 
 # Ril
 
