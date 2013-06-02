@@ -14,7 +14,6 @@
 
 # Common stuff
 DEVICE_PACKAGE_OVERLAYS += device/htc/msm7x30-common/overlay
-TARGET_PREBUILT_HEADERS := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm7x30
