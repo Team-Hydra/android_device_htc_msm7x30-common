@@ -34,9 +34,9 @@ PRODUCT_COPY_FILES += \
 
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/msm7x30-common/media_codecs.xml:system/etc/media_codecs.xml \
-    device/htc/msm7x30-common/audio_policy.conf:system/etc/audio_policy.conf
+    device/htc/msm7x30-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/htc/msm7x30-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/htc/msm7x30-common/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # Wifi firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
