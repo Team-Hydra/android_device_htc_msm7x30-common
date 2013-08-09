@@ -36,6 +36,9 @@ USE_MALLOC_ALIGNMENT := 16
 TARGET_HAVE_TSLIB := false
 TARGET_CPU_VARIANT := cortex-a8
 
+#temp - gcc 4.7 causes bootloop for us. use cm10.1 4.6 for now
+TARGET_GCC_VERSION_EXP := 6
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
 
