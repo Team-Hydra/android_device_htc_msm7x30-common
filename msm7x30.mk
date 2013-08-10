@@ -78,9 +78,10 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc
 
-# Power HAL
 PRODUCT_PACKAGES += \
-    power.msm7x30
+    power.msm7x30 \
+    libnetcmdiface \
+    libsurfaceflinger_client
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
