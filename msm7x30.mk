@@ -95,6 +95,9 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     setup_fs
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.bg_apps_limit=12
+
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
