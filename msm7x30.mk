@@ -79,7 +79,7 @@ PRODUCT_PACKAGES += \
     libOmxVenc
 
 PRODUCT_PACKAGES += \
-    power.msm7x30
+    power.msm7x30 \
     libnetcmdiface \
     libsurfaceflinger_client
 
