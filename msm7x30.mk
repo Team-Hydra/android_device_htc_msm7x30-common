@@ -30,6 +30,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
+# USB init script
+PRODUCT_COPY_FILES += \
+    device/htc/msm7x30-common/init.htc7x30.usb.rc:root/init.htc7x30.usb.rc
+
 # Common 7x30 firmware
 PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/firmware/vidc_720p_command_control.fw:system/etc/firmware/vidc_720p_command_control.fw \
@@ -61,6 +65,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm7x30 \
+    audio.usb.default \
     libaudioutils
 
 # Video
@@ -82,6 +87,11 @@ PRODUCT_PACKAGES += \
     power.msm7x30 \
     libnetcmdiface \
     libsurfaceflinger_client
+
+# Misc
+PRODUCT_PACKAGES += \
+    DeviceSettings \
+    com.android.future.usb.accessory
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
