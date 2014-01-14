@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Common proprietary blobs
+$(call inherit-product-if-exists, vendor/htc/msm7x30-common/msm7x30-vendor.mk)
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -30,20 +33,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-# Common 7x30 firmware
-PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/firmware/vidc_720p_command_control.fw:system/etc/firmware/vidc_720p_command_control.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_h263_dec_mc.fw:system/etc/firmware/vidc_720p_h263_dec_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_h264_dec_mc.fw:system/etc/firmware/vidc_720p_h264_dec_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_h264_enc_mc.fw:system/etc/firmware/vidc_720p_h264_enc_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_mp4_dec_mc.fw:system/etc/firmware/vidc_720p_mp4_dec_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_mp4_enc_mc.fw:system/etc/firmware/vidc_720p_mp4_enc_mc.fw \
-    device/htc/msm7x30-common/firmware/vidc_720p_vc1_dec_mc.fw:system/etc/firmware/vidc_720p_vc1_dec_mc.fw \
-    device/htc/msm7x30-common/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
-    device/htc/msm7x30-common/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
-    device/htc/msm7x30-common/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
-    device/htc/msm7x30-common/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw
-
 # Media Profiles
 PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
@@ -56,6 +45,15 @@ PRODUCT_COPY_FILES += \
 # Common GPS config
 PRODUCT_COPY_FILES += \
     device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
+
+# Wifi firmware
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
+
+# Device-Specific HALs
+PRODUCT_PACKAGES += \
+    lights.msm7x30 \
+    sensors.msm7x30 \
+    power.msm7x30
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -79,9 +77,10 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc
 
+# Misc
 PRODUCT_PACKAGES += \
-    power.msm7x30 \
     libnetcmdiface \
+    com.android.future.usb.accessory \
     libsurfaceflinger_client
 
 # Live Wallpapers
